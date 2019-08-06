@@ -8,7 +8,6 @@
 		<version>2.1.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.progressivecoder.es</groupId>
 	<artifactId>event-sourcing-cqrs-axon-spring-boot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>event-sourcing-cqrs-axon-spring-boot</name>
@@ -35,12 +34,12 @@
 			<groupId>org.axonframework</groupId>
 			<artifactId>axon-spring-boot-starter</artifactId>
 			<version>4.0.3</version>
-			<exclusions>
+<!--			<exclusions>
 				<exclusion>
 					<groupId>org.axonframework</groupId>
 					<artifactId>axon-server-connector</artifactId>
 				</exclusion>
-			</exclusions>
+			</exclusions>-->
 		</dependency>
 
 		<dependency>
