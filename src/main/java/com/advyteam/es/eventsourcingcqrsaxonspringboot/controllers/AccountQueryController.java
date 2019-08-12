@@ -12,7 +12,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/bank-accounts")
-@Api(value = "Account Queries", description = "Account Query Events Endpoint", tags = "Account Queries")
+@Api(value = "Account Queries",
+        description = "Account Query Events Endpoint",
+        tags = "Account Queries"
+)
+
 public class AccountQueryController {
 
     private final AccountQueryService accountQueryService;
@@ -22,13 +26,17 @@ public class AccountQueryController {
     }
 
     @GetMapping("/{accountNumber}")
-    public AccountQueryEntity getAccount(@PathVariable(value = "accountNumber") String accountNumber){
+    public AccountQueryEntity getAccount(
+            @PathVariable(value = "accountNumber") String accountNumber){
+
         return accountQueryService.getAccount(accountNumber);
     }
 
     @GetMapping("/{accountNumber}/events")
-    public List<Object> listEventsForAccount(@PathVariable(value = "accountNumber") String accountNumber){
+    public List<Object> listEventsForAccount(
+            @PathVariable(value = "accountNumber") String accountNumber){
+
         return accountQueryService.listEventsForAccount(accountNumber);
+
     }
-    
 }

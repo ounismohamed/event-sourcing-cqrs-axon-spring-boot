@@ -1,7 +1,7 @@
 package com.advyteam.es.eventsourcingcqrsaxonspringboot.commands;
 
 public class DebitMoneyCommand extends BaseCommand<String> {
-
+    
     public final double debitAmount;
 
     public final String currency;
